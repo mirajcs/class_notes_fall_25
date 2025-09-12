@@ -32,16 +32,31 @@ Suppose that $c$ is a constant and the limits $ lim_(x->a) f(x) " and " lim_(x->
 #figure(image("images/fig_01.png", width: 30%))
 
 1. $lim_(x->-2)[f(x)+5g(x)]$
+$
+  lim_(x->-2)[f(x)+5g(x)] & =lim_(x->-2)f(x)+lim_(x->-2)5g(x) " by law (1)"\
+  & =  lim_(x->-2) f(x) + 5lim_(x->-2)g(x) "by law (3)"\
+  & = 1 + 5 times (-1)\
+  & = 1 -5 =-4
+$
 
 
 #pagebreak()
 #figure(image("images/fig_01.png", width: 30%))
 2. $lim_(x->1)[f(x)g(x)]$
+$
+  lim_(x->1)[f(x)g(x)] & = lim_(x->1)f(x) dot lim_(x->1)g(x) "By law (4)"\
+  & = 2 times lim_(x->1) g(x) " does not exist"
+$ because $lim_(x->1^-)g(x)=-2$ and $lim_(x->1^+)g(x)=-1$. They are not equal.  
+
 
 #pagebreak()
 #figure(image("images/fig_01.png", width: 30%))
 
-3. $lim_(x->2)f(x)/g(x)$ 
+3. $lim_(x->2)f(x)/g(x)$
+$
+  lim_(x->2) f(x)/g(x) & = (lim_(x->2)f(x))/(lim_(x->2)g(x))\
+  & = (1.5 approx )/0
+$ Limit does not exist. 
 
 #pagebreak()
 
@@ -65,6 +80,13 @@ $ lim_(x->a) root(n,f(x)) = root(n, lim_(x->a)f(x)), $ where $n$ is a positive i
 Evaluate the following limits and justify each steps. 
 
 1. $lim_(x->5)(2x^2 -3x +4)$
+$
+  lim_(x->5)(2x^2 -3x +4) & = lim_(x->5)(2x^2) -lim_(x->5)3x+lim_(x->5)4 ("By the laws (1) and (2)")\
+  & = 2 lim_(x->5)x^2 - 3lim_(x ->5) x+ lim_(x->5)4 ("By law (3)")\
+  & = 2 (lim_(x->5)x)^2 - 3 lim_(x->5) x + lim_(x->5)4 ("By law 10")\
+  & = 2 (lim_(x->5)x)^2 - 3 lim_(x->5) x + 4 ("By law (8)")\
+  & = 2 times (5)^2- 3 times 5 +4= 50-15+4=39 "(By the law (9))"
+$
 
 #pagebreak()
 
