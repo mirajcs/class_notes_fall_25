@@ -2,8 +2,8 @@
 
 
 #show: slides.with(
-  title: "Miraj Samarakkody", // Required
-  subtitle: "Introduction to Probability",
+  title: "Introduction to Probability", // Required
+  subtitle: "Tougaloo College",
   date: "",
   authors: ("Miraj Samarakkody"),
    // Optional Styling (for more / explanation see in the typst universe)
@@ -11,6 +11,10 @@
   layout: "medium",
   title-color: blue.darken(60%),
   toc: true,
+  count: none,
+  first-slide: true,
+  footer-title: "Miraj Samarakkody",
+  footer-subtitle: "Probability"
 )
 
 = Bayes' rule and the law of total probability
