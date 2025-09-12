@@ -39,7 +39,6 @@ $R-$ Rugen is guilty \
 $M-$ Rugen has six fingers on his right hand  
 $ P(R|M) = ? $ 
 
-
 #pagebreak()
 
 Now suppose that all $n$ men who live in the country have their hands checked, and Rugen is the only one with six fingers on his right hand. Given this information, what is the probabiltiy that Rugen is the prepetrator? 
