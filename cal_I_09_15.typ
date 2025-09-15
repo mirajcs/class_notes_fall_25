@@ -45,6 +45,14 @@ $ lim_(x->a) root(n,f(x)) = root(n, lim_(x->a)f(x)), $ where $n$ is a positive i
 
 
 2. $lim_(x->-2) (x^3 +2x^2 - 1)/(5-3x)$
+$
+  lim_(x->-2)(x^3 +2 x^2 -1)/(5-3x) & = (lim_(x->-2)x^3+2x^2-1)/(lim_(x->-2)(5-3x)) "by law (5)"\
+  & = (lim_(x->-2)x^3 + lim_(x->-2)2x^2-lim_(x->-2)1)/(lim_(x->-2)5 -lim_(x->-2)3x) "by laws (1) and (2)"\
+  & = (lim_(x->-2)x^3 + lim_(x->-2)2x^2 -1)/(5-lim_(x->-2) 3x) "by law (8)"\
+  & = (lim_(x->-2)x^3 + 2lim_(x->-2)x^2 -1)/(5-3lim_(x->-2)x) "by law (3)"\
+  & = ((-2)^3+2(-2)^2-1)/(5-3(-2))\
+  & = (-8+8-1)/(5+6) = -1/11
+$
 
 #pagebreak()
 
@@ -53,8 +61,12 @@ $ lim_(x->a) root(n,f(x)) = root(n, lim_(x->a)f(x)), $ where $n$ is a positive i
 
 If $f$ is a polynomial or a rational function and $a$ is in the domain $f$, then $ lim_(x->a) f(x) =f(a) $
 
-*Example:* Find $lim_(x->1)(x^2-1)/(x-1)$. 
+*Example:* Find $lim_(x->1)(x^2-1)/(x-1)$. \
+You cannot just substitute the value $x=1$.
 
+For $x !=1$. $
+               lim_(x ->1) ((x+1)cancel((x-1)))/cancel(x-1) & = lim_(x->1)(x+1)= 2
+             $ 
 #pagebreak()
 
 If $f(x)=g(x)$ when $x!= a$, then $lim_(x->a)f(x)=lim_(x->a)g(x)$, provided that the limits exists. 
@@ -62,14 +74,32 @@ If $f(x)=g(x)$ when $x!= a$, then $lim_(x->a)f(x)=lim_(x->a)g(x)$, provided that
 
 *Example:* Find $lim_(x->1)g(x),$ where $ g(x) = cases(x+1 & "if" x!= 1 \ pi & "if" x=1) $
 
+Define a function $f(x)=x+1$. Then $f(x)=g(x)$ when $x!=1$. 
+
+Then $
+       lim_(x->1)g(x) = lim_(x->1)f(x) = lim_(x->1)x+1=2 
+     $
+
+
 #pagebreak()
 
-*Example* Evaluate $lim_(h->0) ((3+h^2)-9)/h$. 
+*Example* Evaluate $lim_(h->0) ((3+h)^2-9)/h$.
+$
+  lim_(h->0) ((3+h)^2-9)/(h) & = lim_(h->0)(cancel(9)+6cancel(h)+h^cancel(2)-cancel(9))/(cancel(h))\
+  & = lim_(h ->0) 6 +h \
+ & = 6
+$ 
 
 #pagebreak()
 
 *Example:*
-Find $lim_(t->0)(sqrt(t^2+9)-3)/t^2$. 
+Find $lim_(t->0)(sqrt(t^2+9)-3)/t^2$.
+
+$
+  lim_(t ->0)(sqrt(t^2+9)-3)/(t^2) dot (sqrt(t^2 +9)+3)/(sqrt(t^2+9)+3) & = lim_(t->0) (t^2+9  - 9)/(t^2 sqrt(t^2 +9)+3t^2)\
+  & = lim_(t->0) (1)/(sqrt(t^2+9)+3)\
+  & = 1/(sqrt(9)+3) = 1/6
+$
 
 #pagebreak()
 == Using one-sided limits
@@ -81,6 +111,13 @@ Find $lim_(t->0)(sqrt(t^2+9)-3)/t^2$.
 *Example:* Show that $lim_(x->0)|x|=0$. 
 
 #figure(image("images/fig_04.png", width: 30%))
+
+$
+  |x| = cases(
+    x "if " x>=0\
+    -x "if " x<0
+  )
+$Take $lim_(x->0^-)|x|=lim_(x->0)(-x)=0$. Then $lim_(x->0^+)|x|=lim_(x->0^+)x=0$. Then limit is exist and and 0. 
 
 #pagebreak()
 
