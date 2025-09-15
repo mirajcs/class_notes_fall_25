@@ -15,7 +15,7 @@
 == Euclidean Space - Cont. 
 
 
-#def()[For eaach positive integer $k$, let $bb(R)^k$ be the set of all ordered $k-$tuples, $ bold(x) = (x_1, x_2, dots, x_k)$, where $x_1,x_2, dots, x_k$ are real numbers, called coordinates of $bold(x)$. ]
+#def()[For each positive integer $k$, let $bb(R)^k$ be the set of all ordered $k-$tuples, $ bold(x) = (x_1, x_2, dots, x_k)$, where $x_1,x_2, dots, x_k$ are real numbers, called coordinates of $bold(x)$. ]
 - The elements of $bb(R)^k$ is called points, or vectors, especially when $k>1$. 
 
 If $bold(y)=(y_1,y_2,dots,y_k)$ and if $alpha$ is a real number $ bold(x)+bold(y) & =(x_1+y_1, dots , x_k+y_k)\
@@ -77,7 +77,13 @@ $
 
 #pagebreak()
 
-4. $|bold(x) dot bold(y)| <= |bold(x)||bold(y)|$ 
+4. $|bold(x) dot bold(y)| <= |bold(x)||bold(y)|$
+Use Schwarz inequality, 
+$
+  |bold(x)dot bold(y)|=|sum_(i=1)^k x_i y_i|^2 & <= sum_(i=1)^k |x_i|^2 sum_(i=1)^k|y_i|^2 \ 
+  & = sum_(i=1)^k x_i^2 sum_(i=1)^k y_i^2 "because " x_i, y_i in bb(R)\
+  & = |x|^2 |y|^2 
+  $ 
 
 #pagebreak()
 
@@ -90,19 +96,23 @@ $
 $ Consider, $2 bold(x) dot bold(y)  <= |2 bold(x) dot bold(y)| = 2 | bold(x) dot bold(y)| <= 2|bold(x)||bold(y)|$
 $
   |bold(x)+bold(y)|^2 & <= |bold(x)|^2+ 2|bold(x) ||bold(y)| + |bold(y)|^2\
-  & = (|bold(x)|+|bold(y)|)^2
+  & = (|bold(x)|+|bold(y)|)^2 
 $
 
 #pagebreak()
 
-7. $|bold(x)+bold(y)| <= |bold(x)-bold(y)|+|bold(y)-bold(z)|$ 
-
+6. $|bold(x)- bold(z)| <= |bold(x)-bold(y)|+|bold(y)-bold(z)|$ 
+Use (5. ) $|bold(x) + bold(y)| <= |bold(x)|+|bold(y)|$. Replace $x$ by $x-y$ and $y$ by $y-z$
+$
+  |x-cancel(y) + cancel(y)-z| & <= |x-y| + |y-z|\
+  |x-z| & <= |x-y|+|y-z|
+$
 
 = Basic Topology
 
 == Finite, Countable, and Uncountable Sets
 
-#def()[Consider two sets $A$ and $B$ and suppose that with each element $x$ of $A$ thers is associated an element of $B$, which we denoted by $f(x)$. Then $f$ is said to be a function from $A$ to $B$. 
+#def()[Consider two sets $A$ and $B$ and suppose that with each element $x$ of $A$ there is associated an element of $B$, which we denoted by $f(x)$. Then $f$ is said to be a function from $A$ to $B$. 
 - The set $A$ is called the *domain of $f$*.
 - The elements $f(x)$ are called the values of $f$.
 - The set of all values is called the *range of $f$* 
