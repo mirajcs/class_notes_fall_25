@@ -47,7 +47,71 @@ For $n$ events $A_1, A_2, dots, A_n$ to be independent, we require any pair to s
 ]
 
 #def(title: "Conditional Independence")[
-
+  Events $A$ and $B$ are said to be conditionally independent given $E$ if $P(A inter B |E) = P(A|E)P(B|E)$.
 ]
+
+$P(A|B)=P(A)P(B)$ does not imply $P(A,B|E)=P(A|E)P(B|E)$. 
+
+#pagebreak()
+
+*Example:* Conditional independence given $E$ vs. given $E^c$. 
+
+Suppose there are two types of classes: good classes and bad classes. 
+
+In good classes, if you work hard, you are very likely to get an $A$. 
+
+In bad classes, the professor randomly assigns grades to students regardless of their effort. 
+
+$G-$ the event that a class is good\
+$W-$ the event that you work hard\
+$A-$ event that you receive an $A$.\
+
+$W$ and $A$ are conditionally independent given $G^c$. \
+$W$ and $A$ are *not* conditionally independent given $G$.
+
+#pagebreak()
+
+*Example:* Conditional independence doesn't imply independence
+
+Suppose we have chosen either a fair coin or a biased coin with probability $3/4$ of Heads, but we do not know which one we have chosen. \
+We flip the coin a number of times. 
+
+Conditional on choosing the fair coin, the coin tosses are independent, with each toss having probability $1/2$ of heads. 
+
+Conditional on choosing the biased coin, the tosses are independent, each with probability $3/4$ of Heads. 
+
+However, the coin tosses are not unconditionally independent, because if we don’t know which coin we’ve chosen, then observing the sequence of tosses gives us information about whether we have the fair coin or the biased coin in our hand. 
+
+Let $F$ be the event that we’ve chosen the fair coin, and let $A_1$ and $A_2$ be the events that the first and second coin tosses land Heads. Conditional on $F$, $A_1$ and $A_2$ are independent, but $A_1$ and $A_2$ are not unconditionally independent because $A_1$ provides information about $A_2$.
+
+*Example:* Independence doesn’t imply conditional independence
+
+My friends Alice and Bob are the only two people who ever call me on the phone. Each day, they decide independently whether to call me that day. 
+
+$A-$ Alice calls me next Friday\
+$B-$ Bob calls me next Friday\
+$C-$ the event that I receive exactly one call next Friday
+
+Assume that $A$ and $B$ are unconditionally independent with $P(A)>0$ and $P(B)>0$. 
+
+$P(B|C)>0$, while $P(B|A,C)=0 $. So $A$ and $B$ are not conditionally independent given $C$. 
+
+#pagebreak()
+
+*Example:* Why is the baby crying? A certain baby cries if and only if she is hungary, tired or both. 
+
+$C-$the event that the baby is crying\
+$H-$the event that she is hungry\
+$T-$the event that she is tired.
+
+Let $P(C)=c$, $P(H)=h$ and $P(T)=t$, where $c,h,t$ are equal to 0 or 1. Let $H$ and $T$ independent. 
+
+1. Find $c$, in terms of $h$ and $t$.
+
+#pagebreak()
+2. Find $P(H|C)$, $P(T|C)$ and $P(H,T|C)$.
+
+#pagebreak()
+3. Are $H$ and $T$ conditionally independent given $C$? 
 
 
