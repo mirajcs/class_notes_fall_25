@@ -32,7 +32,7 @@ If, for each $y in B$, $f^(-1)(y)$ consists of at most one element of $A$, then 
 
 A 1-1 mapping of $A$ to $B$ also expressed as follows: 
 
-$f(x_1) != f(x_2)$ whenever $x_1 != x_2$ for $x_, x_2 in A$. 
+$f(x_1) != f(x_2)$ whenever $x_1 != x_2$ for $x_1 , x_2 in A$. 
 
 
 #def()[
@@ -61,7 +61,9 @@ $f(x_1) != f(x_2)$ whenever $x_1 != x_2$ for $x_, x_2 in A$.
 
 #pagebreak()
 
-*Example: * Let $A$ be the set of all integers. Prove that $A$ is countable. 
+*Example: * Let $A$ be the set of all integers (of course not finite). Prove that $A$ is countable. 
+ 
+
  
 #pagebreak()
 
