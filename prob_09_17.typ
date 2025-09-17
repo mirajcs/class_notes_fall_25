@@ -137,3 +137,4 @@ $
 P(H|T)P(T|C) & = h/c dot h/c = (h t)/c^2\
 P(H,T|C) != P(H|C)P(T|C)
 $
+

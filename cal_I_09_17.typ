@@ -40,12 +40,30 @@ $Take $lim_(x->0^-)|x|=lim_(x->0)(-x)=0$. Then $lim_(x->0^+)|x|=lim_(x->0^+)x=0$
 
 #figure(image("images/fig_05.png", width: 35%))
 
+$
+  (|x|)/x = cases( x/x = 1 &"if " x>0\ -x/x=-1 &"if " x<0) 
+$
+
+$
+  lim_(x->0^-)(|x|)/x = lim_(x->0^-) -1 = -1 \
+  lim_(x->0^+) (|x|)/x = lim_(x->0^+) 1 = 1
+$
+Limit does not exist, bcause $lim_(x->0^-) (|x|)/x != lim_(x->0^+) (|x|)/x$. 
+
+
 #pagebreak()
 
 *Example:* If 
 $
   f(x) = cases(sqrt(x-4) & "if" x>4\ 8-2x & "if" x<4)
-$ determine whether $lim_(x->4) f(x)$ exists. 
+$ determine whether $lim_(x->4) f(x)$ exists.
+
+$
+  lim_(x->4^-)f(x)= lim_(x->4^-) 8-2x = 8-2(4) = 8-8=0\
+  lim_(x-> 4^+) f(x) = lim_(x->4^+) sqrt(x-4) = sqrt(4-4)=0
+$
+
+We can see that $lim_(x->4^-) f(x)=lim_(x->4^+)f(x)=0$. Therefore $lim_(x->4) f(x)$ is exists. 
 
 #pagebreak()
 
@@ -71,7 +89,22 @@ $ determine whether $lim_(x->4) f(x)$ exists.
 ]
 
 #pagebreak()
-*Example:* Show that $lim_(x->0)x^2 sin(1/x) =0$
+*Example:* Show that $lim_(x->0)x^2 sin(1/x) =0$\
+
+
+We know that $lim_(x->0) sin(1/x)$ does not exist.
+However 
+$
+  -1 <= sin(1/x) <= 1\
+  -x^2 <= x^2 sin(1/x) <= x^2
+$
+Note that 
+$
+  lim_(x->0)-x^2 =lim_(x->0)x^2 =0
+$By the Squeeze theorem, 
+$
+  lim_(x->0) x^2 sin(1/x) = 0
+$
 
 #pagebreak()
 
@@ -89,6 +122,13 @@ $ determine whether $lim_(x->4) f(x)$ exists.
 
 *Example:* Prove that $lim_(x->3)(4x-5)=7$. 
 
+Choose $epsilon>0$ such that $|(4x-5)-7|<epsilon$. 
+Note that $
+            |(4x-5)-7| & = |4x-12|\
+            & = 4|x-3|< epsilon\
+            |x-3| & < epsilon/4
+          $
+Then we can choose $delta = epsilon/4$. For every $epsilon>0$ we have if $0<|x-3|<epsilon/4$, then $|(4x-5)-7|<epsilon$. 
 #pagebreak()
 
 *Example:* Prove that $lim_(x->3)x^2=9$. 
