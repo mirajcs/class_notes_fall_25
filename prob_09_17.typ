@@ -19,7 +19,7 @@
  The situation where events provide no information about each other is called *Independence*.
 
 #def(title: "Independence of three events")[
-  Events $A$. $B$, and $C$ are said to be independent if all of the following equations hold:
+  Events $A$, $B$, and $C$ are said to be independent if all of the following equations hold:
   $
     P(A inter B) & = P(A)P(B)\
     P(A inter C) & = P(A)P(C)\
@@ -36,10 +36,10 @@
 
   Consider two fair, independent coin tosses, and let $A$ be the event that the first is Heads, $B$ is the event that the second is Heads, and $C$ is the event that both tosses have the same result. Calculate:
   $
-  P(A inter B) & = \
-    P(A inter C) & = \
-    P(B inter C) & = \
-    P(A inter B inter C) & = 
+  P(A inter B) & = 1/2 1/2 = 1/4 = P(A)P(B) \
+    P(A inter C) & = 1/2 dot 1/2 = 1/4 = P(A) P(C) \
+    P(B inter C) & = 1/2 dot 1/2 = 1/4 = P(B)P(C)\
+    P(A inter B inter C) & =  P(A inter B) = 1/2 dot 1/2 = 1/4 != P(A) P(B) P(C) = 1/2 dot 1/2 dot 1/2 = 1/8 
   $ 
 
 #def(title: "Independence of many events")[
@@ -50,7 +50,7 @@ For $n$ events $A_1, A_2, dots, A_n$ to be independent, we require any pair to s
   Events $A$ and $B$ are said to be conditionally independent given $E$ if $P(A inter B |E) = P(A|E)P(B|E)$.
 ]
 
-$P(A|B)=P(A)P(B)$ does not imply $P(A,B|E)=P(A|E)P(B|E)$. 
+$P(A inter B)=P(A)P(B)$ does not imply $P(A,B|E)=P(A|E)P(B|E)$. 
 
 #pagebreak()
 
@@ -104,14 +104,36 @@ $C-$the event that the baby is crying\
 $H-$the event that she is hungry\
 $T-$the event that she is tired.
 
-Let $P(C)=c$, $P(H)=h$ and $P(T)=t$, where $c,h,t$ are equal to 0 or 1. Let $H$ and $T$ independent. 
+Let $P(C)=c$, $P(H)=h$ and $P(T)=t$, where $c,h,t$ are not equal to 0 or 1. Let $H$ and $T$ independent. 
 
 1. Find $c$, in terms of $h$ and $t$.
+$
+  c =P(C) & = P(H union T)\
+  & = P(H) + P(T) - P(H inter T)\
+  & = h + t - P(H)P(T) "(independence)"\
+  & = h+t -h t \
+  c & = h + t - h t 
+$
 
 #pagebreak()
-2. Find $P(H|C)$, $P(T|C)$ and $P(H,T|C)$.
+2. Find $P(H|C)$, $P(T|C)$ and $P(H,T|C)$. 
+$
+  P(H |C) & = (P(C|H)P(H))/P(C) "by Bayes' rule"\
+  & = h/c\
+  P(T|C) & = (P(C|T)P(T))/P(C)\
+  & = t/c\
+  P(H,T|C) & = (P(C|H,T)P(H,T))/P(C)\
+  & = (P(H)P(T))/P(C)\
+  & = (h t)/c 
+$
 
 #pagebreak()
 3. Are $H$ and $T$ conditionally independent given $C$? 
 
+No, if the baby is crying but not hungry, she must be tired.
 
+$
+  P(H,T|C) = (h t)/c\
+P(H|T)P(T|C) & = h/c dot h/c = (h t)/c^2\
+P(H,T|C) != P(H|C)P(T|C)
+$
