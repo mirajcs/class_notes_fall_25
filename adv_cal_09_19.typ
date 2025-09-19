@@ -43,7 +43,7 @@
  $f$ is onto.\
   This is trivial because for any $y in A$, you have a $n in J$.  
 
-Therefore we have 1-1 correspondance. By the definition, $A$ is countable. 
+Therefore we have 1-1 correspondence. By the definition, $A$ is countable. 
  
 #pagebreak()
 
@@ -76,7 +76,7 @@ Having chosen $n_1, dots, n_(k-1)$, let $n_k$ be the smallest integer greater th
 
 Define $f: J ->E$ such that $f(k)=x_(n_k)$\
 $f$ is one to one and onto. \
-Therefore we obtain a 1-1 correspondance between $E$ and $J$.\
+Therefore we obtain a 1-1 correspondence between $E$ and $J$.\
 $E$ is countable.  
 #pagebreak()
 
