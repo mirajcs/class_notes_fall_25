@@ -31,12 +31,27 @@
 *Example: * Let $A$ be the set of all integers (of course not finite). Prove that $A$ is countable. 
  
 
+ Goal: $J tilde A $\
+ We can define a piecewise function $f: J -> A$.\
+ $
+   f(n) = cases(n/2 & "if " n "even"\
+   -(n-1)/2 & "if " n "odd")
+ $
+ $f$ is 1-1. \
+ for any $n_1 !=n_2$, $f(n_1)!= f(n_2)$.\
+
+ $f$ is onto.\
+  This is trivial because for any $y in A$, you have a $n in J$.  
+
+Therefore we have 1-1 correspondance. By the definition, $A$ is countable. 
  
 #pagebreak()
 
 #def(title: "Sequence")[
   A sequence is a function $f$ defined on the set of all positive integers. If $f(n)=x_n$, for $n in bb(Z)^+$ denote the sequence $f$ by the symbol ${x_n}$. The values of $f$ (the elements $x_n$), are called the *terms* of the sequence. 
 ]
+
+
 
 If $A$ is a set and if $x_n in A$ for all $n in bb(Z)^+$, then ${x_n}$ is said to be a sequence in $A$. \
 \
@@ -50,6 +65,20 @@ Examples: $
 #thm()[
   Every infinite subset of a countable set $A$ is countable. 
 ]
+
+*Proof:*
+
+Suppose $E subset A$, and $E$ is infinite. \
+Arranging the elements $x$ of $A$ in a sequence ${x_n}$ of distinct elements. \
+Construct a sequence ${n_k}$ as follows: \
+Let $n_1$ be the smallest integer such that $x_(n_1) in E$.\
+Having chosen $n_1, dots, n_(k-1)$, let $n_k$ be the smallest integer greater than $n_(k-1)$ such that $x_(n_k) in E$. 
+
+Define $f: J ->E$ such that $f(k)=x_(n_k)$\
+$f$ is one to one and onto. \
+Therefore we obtain a 1-1 correspondance between $E$ and $J$.\
+$E$ is countable.  
+#pagebreak()
 
 #def()[
   Let $A$ and $Omega$ be sets, and suppose that with each element $alpha$ of $A$ there is associated a subset $E_alpha$ of $Omega$.
